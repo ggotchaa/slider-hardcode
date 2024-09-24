@@ -1,0 +1,13 @@
+<div class="slider-container">
+  <div
+    class="slide"
+    *ngFor="
+      let slide of scheduledSlides
+        | slice : currentIndex : currentIndex + slidesToShow
+    "
+  >
+    <a [href]="slide.url">
+      <img [src]="slide.image" [alt]="'Slide ' + slide.id" />
+    </a>
+  </div>
+</div>
